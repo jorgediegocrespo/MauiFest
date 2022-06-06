@@ -1,4 +1,5 @@
-﻿using Foundation;
+﻿//TODO 8.3
+using Foundation;
 using MauiFest.Controls;
 using Microsoft.Maui.Controls.Compatibility.Platform.iOS;
 using Microsoft.Maui.Controls.Platform;
@@ -64,20 +65,6 @@ public class CustomWebViewRenderer : WkWebViewRenderer
         await EvaluateJavaScriptAsync(script);
         return string.Empty;
     }
-
-    //protected override void OnElementChanged(ElementChangedEventArgs<Microsoft.Maui.Controls.WebView> e)
-    //{
-    //    base.OnElementChanged(e);
-
-    //    if (e.NewElement != null)
-    //    {
-    //        ((CustomWebView)e.NewElement).CustomEvaluateJavaScriptAsync = CustomEvaluateJavaScriptAsync;
-    //    }
-    //    if (e.OldElement != null)
-    //    {
-    //        ((CustomWebView)e.OldElement).CustomEvaluateJavaScriptAsync = null;
-    //    }
-    //}
 }
 
 public class CustomWebViewScriptHandler : NSObject, IWKScriptMessageHandler

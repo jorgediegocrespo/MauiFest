@@ -7,27 +7,29 @@
              x:Class="MauiFest.Features.MainPage"
              x:DataType="features:MainViewModel">
 
-    <!--<VerticalStackLayout VerticalOptions="Center" Padding="50" Spacing="10">
+    <VerticalStackLayout VerticalOptions="Center" Padding="50" Spacing="10">
 
         <Button Text="Open app settings"
                 Command="{Binding OpenAppSettingsCommand}"
                 HorizontalOptions="Center" />
 
-        <Entry x:Name="entryTest" Placeholder="Handler test" TextColor="Green"/>
+        <Entry x:Name="entryTest" Placeholder="Handler test 1" TextColor="Green" />
 
-        <Entry x:Name="entryTestEffect" Placeholder="Effect test" TextColor="Green">
+        <Entry x:Name="entryTest2" Placeholder="Handler test 2" HandlerChanging="entryTest2_HandlerChanging" HandlerChanged="entryTest2_HandlerChanged" />
+
+        <!--<Entry x:Name="entryTestEffect" Placeholder="Effect test" TextColor="Green">
             <Entry.Effects>
                 <effects:EntryBorderEffect />
             </Entry.Effects>
-        </Entry>
+        </Entry>-->
 
         <Button Text="Change text color"
                 HorizontalOptions="Center"
                 Clicked="Button_Clicked" />
 
-    </VerticalStackLayout>-->
+    </VerticalStackLayout>
 
-    <Grid RowDefinitions="50, *">
+    <!--<Grid RowDefinitions="50, *">
 
         <Button x:Name="btJavascript" Text="Javascript"
                 HorizontalOptions="Center"
@@ -35,6 +37,6 @@
 
         <controls:CustomWebView x:Name="customWebView" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                                 Source="https://jorgediegocrespo.wordpress.com/contacto/" />
-    </Grid>
+    </Grid>-->
 
 </ContentPage>

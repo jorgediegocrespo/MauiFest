@@ -1,4 +1,5 @@
-﻿namespace MauiFest.Controls
+﻿//TODO 8.1
+namespace MauiFest.Controls
 {
     public class CustomWebView : WebView
     {
@@ -25,7 +26,6 @@
 
             string script = GetStartListenButtonClickJavascript(buttonId);
             var result = await CustomEvaluateJavaScriptAsync(script);
-            int i = 2;
         }
 
         public async Task StopListenButtonClickEvent(string buttonId)

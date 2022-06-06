@@ -5,6 +5,7 @@ using MauiFest.Effects;
 using Microsoft.Maui.Controls.Compatibility.Hosting;
 using MauiFest.Controls;
 using MauiFest.Renderers;
+using MauiFest.Handlers;
 
 namespace MauiFest;
 
@@ -20,17 +21,22 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			})
-            .ConfigureEffects(effectsBuilder =>
-            {
-                //TODO 5.4
+            //TODO 7.4
+            //.ConfigureEffects(effectsBuilder =>
+            //{
                 //effectsBuilder.Add<EntryBorderEffect, NativeEntryBorderEffect>();
-            })            
-            .UseMauiCompatibility()
-            .ConfigureMauiHandlers((handlers) =>
-            {
-                handlers.AddCompatibilityRenderer(typeof(CustomWebView), typeof(CustomWebViewRenderer));
-            })
-
+            //})
+            //TODO 8.4
+            //.UseMauiCompatibility()
+            //.ConfigureMauiHandlers((handlers) =>
+            //{
+            //    handlers.AddCompatibilityRenderer(typeof(CustomWebView), typeof(CustomWebViewRenderer));
+            //})
+            //TODO 5.4
+            //.ConfigureMauiHandlers((handlers) =>
+            //{
+            //    handlers.AddHandler(typeof(Entry), typeof(CustomEntryHandler));
+            //})
             .Services
                 //TODO 2.5
                 //#if ANDROID
