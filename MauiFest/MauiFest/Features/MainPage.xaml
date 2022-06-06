@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:features="clr-namespace:MauiFest.Features"
+             x:Class="MauiFest.Features.MainPage"
+             x:DataType="features:MainViewModel">
+
+    <VerticalStackLayout VerticalOptions="Center" Padding="50" Spacing="10">
+
+        <Button Text="Open app settings"
+                Command="{Binding OpenAppSettingsCommand}"
+                HorizontalOptions="Center" />
+
+        <Entry x:Name="entryTest" Placeholder="Handler test" TextColor="Green"/>
+
+        <Button Text="Change text color"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
