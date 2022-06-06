@@ -48,7 +48,6 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-
 	<ItemGroup Condition="$(TargetFramework.StartsWith('net6.0-maccatalyst')) != true">
 		<Compile Remove="**\*.MacCatalyst.cs" />
 		<None Include="**\*.MacCatalyst.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />

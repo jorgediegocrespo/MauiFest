@@ -1,14 +1,10 @@
-﻿//TODO 2
-//#if ANDROID
-//using MauiFest.Platforms.Android.Services;
-//#elif IOS
-//using MauiFest.Platforms.iOS.Services;
-//#endif
-
-
-using MauiFest.Services;
+﻿using MauiFest.Services;
 using MauiFest.Features;
 using MauiFest.Mappers;
+using MauiFest.Effects;
+using Microsoft.Maui.Controls.Compatibility.Hosting;
+using MauiFest.Controls;
+using MauiFest.Renderers;
 
 namespace MauiFest;
 
@@ -23,16 +19,32 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+			})
+            .ConfigureEffects(effectsBuilder =>
+            {
+                //TODO 5.4
+                //effectsBuilder.Add<EntryBorderEffect, NativeEntryBorderEffect>();
+            })            
+            .UseMauiCompatibility()
+            .ConfigureMauiHandlers((handlers) =>
+            {
+                handlers.AddCompatibilityRenderer(typeof(CustomWebView), typeof(CustomWebViewRenderer));
+            })
 
-		builder.Services
-            //TODO 2
-			.AddSingleton<ISettingsService, SettingsService>()
-            .AddTransient<AppShell>()
-            .AddTransient<MainPage>()
-            .AddTransient<MainViewModel>();
+            .Services
+                //TODO 2.5
+                //#if ANDROID
+                //.AddSingleton<ISettingsService, MauiFest.Platforms.Android.Services.SettingsService>()
+                //#elif IOS    
+                //.AddSingleton<ISettingsService, MauiFest.Platforms.iOS.Services.SettingsService>()
+                //#endif
+                .AddSingleton<ISettingsService, SettingsService>()
+                .AddTransient<AppShell>()
+                .AddTransient<MainPage>()
+                .AddTransient<MainViewModel>();
 
-        CreateHandlers();
+        //TODO 4.3
+        //CreateHandlers();
         return builder.Build();
 	}
 

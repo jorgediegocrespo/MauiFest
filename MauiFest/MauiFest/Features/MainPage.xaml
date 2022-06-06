@@ -2,10 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:features="clr-namespace:MauiFest.Features"
+             xmlns:effects="clr-namespace:MauiFest.Effects"
+             xmlns:controls="clr-namespace:MauiFest.Controls"
              x:Class="MauiFest.Features.MainPage"
              x:DataType="features:MainViewModel">
 
-    <VerticalStackLayout VerticalOptions="Center" Padding="50" Spacing="10">
+    <!--<VerticalStackLayout VerticalOptions="Center" Padding="50" Spacing="10">
 
         <Button Text="Open app settings"
                 Command="{Binding OpenAppSettingsCommand}"
@@ -13,10 +15,26 @@
 
         <Entry x:Name="entryTest" Placeholder="Handler test" TextColor="Green"/>
 
+        <Entry x:Name="entryTestEffect" Placeholder="Effect test" TextColor="Green">
+            <Entry.Effects>
+                <effects:EntryBorderEffect />
+            </Entry.Effects>
+        </Entry>
+
         <Button Text="Change text color"
                 HorizontalOptions="Center"
                 Clicked="Button_Clicked" />
 
-    </VerticalStackLayout>
+    </VerticalStackLayout>-->
+
+    <Grid RowDefinitions="50, *">
+
+        <Button x:Name="btJavascript" Text="Javascript"
+                HorizontalOptions="Center"
+                Clicked="btJavascript_Clicked" />
+
+        <controls:CustomWebView x:Name="customWebView" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                Source="https://jorgediegocrespo.wordpress.com/contacto/" />
+    </Grid>
 
 </ContentPage>

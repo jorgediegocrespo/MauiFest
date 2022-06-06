@@ -4,6 +4,7 @@ namespace MauiFest.Mappers;
 
 public class ButtonMappers
 {
+    //TODO 4.2
     public static void CreateHandlers()
     {
         //Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("Border", (handler, view) =>
