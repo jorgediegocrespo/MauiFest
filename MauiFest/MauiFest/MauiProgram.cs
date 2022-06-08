@@ -27,11 +27,11 @@ public static class MauiProgram
             //effectsBuilder.Add<EntryBorderEffect, NativeEntryBorderEffect>();
             //})
             //TODO 8.4 Renderer
-            //.UseMauiCompatibility()
-            //.ConfigureMauiHandlers((handlers) =>
-            //{
-            //    handlers.AddCompatibilityRenderer(typeof(CustomWebView), typeof(CustomWebViewRenderer));
-            //})
+            .UseMauiCompatibility()
+            .ConfigureMauiHandlers((handlers) =>
+            {
+                handlers.AddCompatibilityRenderer(typeof(CustomWebView), typeof(CustomWebViewRenderer));
+            })
             //TODO 5.4 Handlers - own handler
             //.ConfigureMauiHandlers((handlers) =>
             //{
@@ -55,8 +55,8 @@ public static class MauiProgram
         return builder.Build();
 	}
 
-    private static void CreateMappers()
-    {
-        ButtonMappers.CreateMappers();
-    }
+    //public static void CreateMappers()
+    //{
+    //    ButtonMappers.CreateMappers();
+    //}
 }
