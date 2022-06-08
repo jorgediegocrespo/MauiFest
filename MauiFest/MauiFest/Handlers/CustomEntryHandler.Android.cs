@@ -1,4 +1,4 @@
-﻿//TODO 5.2
+﻿//TODO 5.2 Handlers - own handler
 using Android.Content;
 using Android.Graphics.Drawables;
 using Android.Util;

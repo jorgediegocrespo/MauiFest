@@ -1,4 +1,4 @@
-﻿//TODO 2.2
+﻿//TODO 2.2 Platform services
 //using Android.Content;
 //using MauiFest.Services;
 

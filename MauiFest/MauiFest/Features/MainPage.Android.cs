@@ -1,4 +1,4 @@
-﻿//TODO 6.1
+﻿//TODO 6.1 Handlers - lifecycle
 using Android.Content;
 using Android.Graphics.Drawables;
 using Android.Util;

@@ -21,41 +21,42 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			})
-            //TODO 7.4
+            //TODO 7.4 Effects
             //.ConfigureEffects(effectsBuilder =>
             //{
-                //effectsBuilder.Add<EntryBorderEffect, NativeEntryBorderEffect>();
+            //effectsBuilder.Add<EntryBorderEffect, NativeEntryBorderEffect>();
             //})
-            //TODO 8.4
+            //TODO 8.4 Renderer
             //.UseMauiCompatibility()
             //.ConfigureMauiHandlers((handlers) =>
             //{
             //    handlers.AddCompatibilityRenderer(typeof(CustomWebView), typeof(CustomWebViewRenderer));
             //})
-            //TODO 5.4
+            //TODO 5.4 Handlers - own handler
             //.ConfigureMauiHandlers((handlers) =>
             //{
             //    handlers.AddHandler(typeof(Entry), typeof(CustomEntryHandler));
             //})
             .Services
-                //TODO 2.5
+                //TODO 2.5 Platform services
                 //#if ANDROID
                 //.AddSingleton<ISettingsService, MauiFest.Platforms.Android.Services.SettingsService>()
                 //#elif IOS    
                 //.AddSingleton<ISettingsService, MauiFest.Platforms.iOS.Services.SettingsService>()
                 //#endif
-                .AddSingleton<ISettingsService, SettingsService>()
+                //TODO 3.3 Common services
+                //.AddSingleton<ISettingsService, SettingsService>()
                 .AddTransient<AppShell>()
                 .AddTransient<MainPage>()
                 .AddTransient<MainViewModel>();
 
-        //TODO 4.3
-        //CreateHandlers();
+        //TODO 4.3 Handlers - mappers
+        //CreateMappers();
         return builder.Build();
 	}
 
-    private static void CreateHandlers()
+    private static void CreateMappers()
     {
-        ButtonMappers.CreateHandlers();
+        ButtonMappers.CreateMappers();
     }
 }

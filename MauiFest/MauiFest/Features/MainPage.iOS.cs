@@ -1,4 +1,4 @@
-﻿//TODO 6.2
+﻿//TODO 6.2 Handlers - lifecycle
 using Microsoft.Maui.Platform;
 using System.Diagnostics;
 

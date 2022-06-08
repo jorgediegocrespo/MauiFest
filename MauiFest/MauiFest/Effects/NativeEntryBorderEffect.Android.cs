@@ -1,4 +1,4 @@
-﻿//TODO 7.2
+﻿//TODO 7.2 Effects
 using Android.Content;
 using Android.Graphics.Drawables;
 using Android.Util;

@@ -20,6 +20,7 @@ public partial class MainPage : ContentPage
         }
     }
 
+    //TODO 8.4 Renderer
     //private void btJavascript_Clicked(object sender, EventArgs e)
     //{
     //    Dispatcher.Dispatch(async () => await customWebView.StartListenButtonClickEvent("menu-item-10", ShowMessage));

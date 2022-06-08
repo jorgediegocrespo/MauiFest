@@ -1,4 +1,4 @@
-﻿//TODO 8.2
+﻿//TODO 8.2 Renderer
 using Android.Content;
 using Android.Webkit;
 using Java.Interop;

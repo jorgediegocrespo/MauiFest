@@ -9,14 +9,18 @@
 
     <VerticalStackLayout VerticalOptions="Center" Padding="50" Spacing="10">
 
+        <!--preprocessor directives / services-->
         <Button Text="Open app settings"
                 Command="{Binding OpenAppSettingsCommand}"
                 HorizontalOptions="Center" />
 
+        <!--handler - mapper/own handler -->
         <Entry x:Name="entryTest" Placeholder="Handler test 1" TextColor="Green" />
 
-        <Entry x:Name="entryTest2" Placeholder="Handler test 2" HandlerChanging="entryTest2_HandlerChanging" HandlerChanged="entryTest2_HandlerChanged" />
+        <!--handler - lifecycle-->
+        <!--<Entry x:Name="entryTest2" Placeholder="Handler test 2" HandlerChanging="entryTest2_HandlerChanging" HandlerChanged="entryTest2_HandlerChanged" />-->
 
+        <!--effect-->
         <!--<Entry x:Name="entryTestEffect" Placeholder="Effect test" TextColor="Green">
             <Entry.Effects>
                 <effects:EntryBorderEffect />
@@ -29,6 +33,7 @@
 
     </VerticalStackLayout>
 
+    <!--renderer-->
     <!--<Grid RowDefinitions="50, *">
 
         <Button x:Name="btJavascript" Text="Javascript"
