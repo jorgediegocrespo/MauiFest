@@ -13,7 +13,7 @@ public class NativeEntryBorderEffect : PlatformEffect
         var aux = Container;
 
         platformView.Layer.CornerRadius = Convert.ToSingle(10);
-        platformView.Layer.BorderColor = view.TextColor.ToCGColor();
+        platformView.Layer.BorderColor = Colors.Green.ToCGColor();
         platformView.Layer.BorderWidth = 2;
         platformView.ClipsToBounds = true;
     }

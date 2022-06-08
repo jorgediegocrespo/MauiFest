@@ -22,10 +22,10 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			})
             //TODO 7.4 Effects
-            //.ConfigureEffects(effectsBuilder =>
-            //{
-            //effectsBuilder.Add<EntryBorderEffect, NativeEntryBorderEffect>();
-            //})
+            .ConfigureEffects(effectsBuilder =>
+            {
+                effectsBuilder.Add<EntryBorderEffect, NativeEntryBorderEffect>();
+            })
             //TODO 8.4 Renderer
             //.UseMauiCompatibility()
             //.ConfigureMauiHandlers((handlers) =>
@@ -55,8 +55,8 @@ public static class MauiProgram
         return builder.Build();
 	}
 
-    private static void CreateMappers()
-    {
-        ButtonMappers.CreateMappers();
-    }
+    //public static void CreateMappers()
+    //{
+    //    ButtonMappers.CreateMappers();
+    //}
 }

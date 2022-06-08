@@ -19,7 +19,7 @@ public class NativeEntryBorderEffect : PlatformEffect
         var gradientBackground = new GradientDrawable();
         gradientBackground.SetShape(ShapeType.Rectangle);
         gradientBackground.SetColor(Colors.LightGray.ToAndroid());
-        gradientBackground.SetStroke(2, view.TextColor.ToAndroid());
+        gradientBackground.SetStroke(2, Colors.Green.ToAndroid());
         gradientBackground.SetCornerRadius(DpToPixels(platformView.Context, Convert.ToSingle(10)));
         platformView.Background = gradientBackground;
 
