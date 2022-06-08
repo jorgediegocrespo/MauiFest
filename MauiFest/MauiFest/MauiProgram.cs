@@ -33,10 +33,10 @@ public static class MauiProgram
             //    handlers.AddCompatibilityRenderer(typeof(CustomWebView), typeof(CustomWebViewRenderer));
             //})
             //TODO 5.4 Handlers - own handler
-            //.ConfigureMauiHandlers((handlers) =>
-            //{
-            //    handlers.AddHandler(typeof(Entry), typeof(CustomEntryHandler));
-            //})
+            .ConfigureMauiHandlers((handlers) =>
+            {
+                handlers.AddHandler(typeof(Entry), typeof(CustomEntryHandler));
+            })
             .Services
                 //TODO 2.5 Platform services
                 //#if ANDROID
@@ -55,8 +55,8 @@ public static class MauiProgram
         return builder.Build();
 	}
 
-    private static void CreateMappers()
-    {
-        ButtonMappers.CreateMappers();
-    }
+    //public static void CreateMappers()
+    //{
+    //    ButtonMappers.CreateMappers();
+    //}
 }
