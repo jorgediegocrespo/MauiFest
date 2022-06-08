@@ -14,13 +14,13 @@ public static class MauiProgram
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
-		builder
-			.UseMauiApp<App>()
-			.ConfigureFonts(fonts =>
-			{
-				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			})
+        builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            })
             //TODO 7.4 Effects
             //.ConfigureEffects(effectsBuilder =>
             //{
@@ -44,19 +44,15 @@ public static class MauiProgram
                 //#elif IOS    
                 //.AddSingleton<ISettingsService, MauiFest.Platforms.iOS.Services.SettingsService>()
                 //#endif
-                //TODO 3.3 Common services
-                //.AddSingleton<ISettingsService, SettingsService>()
+
+                //TODO 3.5 Common services
+                .AddSingleton<ISettingsService, SettingsService>()
                 .AddTransient<AppShell>()
                 .AddTransient<MainPage>()
                 .AddTransient<MainViewModel>();
 
         //TODO 4.3 Handlers - mappers
-        //CreateMappers();
+        //ButtonMappers.CreateMappers();
         return builder.Build();
 	}
-
-    private static void CreateMappers()
-    {
-        ButtonMappers.CreateMappers();
-    }
 }

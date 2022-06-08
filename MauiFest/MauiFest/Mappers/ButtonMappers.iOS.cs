@@ -2,7 +2,7 @@
 
 namespace MauiFest.Mappers;
 
-public class ButtonMappers
+public static class ButtonMappers
 {
     //TODO 4.2 Handlers - mappers
     public static void CreateHandlers()
