@@ -55,8 +55,8 @@ public static class MauiProgram
         return builder.Build();
 	}
 
-    private static void CreateMappers()
-    {
-        ButtonMappers.CreateMappers();
-    }
+    //public static void CreateMappers()
+    //{
+    //    ButtonMappers.CreateMappers();
+    //}
 }

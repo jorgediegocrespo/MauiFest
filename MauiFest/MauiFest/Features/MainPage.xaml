@@ -15,10 +15,10 @@
                 HorizontalOptions="Center" />
 
         <!--handler - mapper/own handler -->
-        <Entry x:Name="entryTest" Placeholder="Handler test 1" TextColor="Green" />
+        <!--<Entry x:Name="entryTest" Placeholder="Handler test 1" TextColor="Green" />-->
 
         <!--handler - lifecycle-->
-        <!--<Entry x:Name="entryTest2" Placeholder="Handler test 2" HandlerChanging="entryTest2_HandlerChanging" HandlerChanged="entryTest2_HandlerChanged" />-->
+        <Entry x:Name="entryTest2" Placeholder="Handler test 2" HandlerChanging="entryTest2_HandlerChanging" HandlerChanged="entryTest2_HandlerChanged" />
 
         <!--effect-->
         <!--<Entry x:Name="entryTestEffect" Placeholder="Effect test" TextColor="Green">

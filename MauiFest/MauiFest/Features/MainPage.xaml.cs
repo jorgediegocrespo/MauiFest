@@ -10,14 +10,14 @@ public partial class MainPage : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        if (entryTest.TextColor == Colors.Green)
-        {
-            entryTest.TextColor = Colors.Red;
-        }
-        else
-        {
-            entryTest.TextColor = Colors.Green;
-        }
+        //if (entryTest.TextColor == Colors.Green)
+        //{
+        //    entryTest.TextColor = Colors.Red;
+        //}
+        //else
+        //{
+        //    entryTest.TextColor = Colors.Green;
+        //}
     }
 
     //TODO 8.4 Renderer
