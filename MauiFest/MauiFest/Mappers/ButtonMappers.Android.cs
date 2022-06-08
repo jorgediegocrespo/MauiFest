@@ -6,19 +6,19 @@ using System.Diagnostics;
 
 namespace MauiFest.Mappers;
 
-public class ButtonMappers
+public static class ButtonMappers
 {
     //TODO 4.1 Handlers - mappers
     public static void CreateMappers()
     {
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("MauiFestMap", (handler, view) =>
         {
-            Debug.WriteLine("***** ModifyMapping MauiFestMap 1");
+            Debug.WriteLine("***** AppendToMapping MauiFestMap 1");
         });
 
         Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("MauiFestMap", (handler, view) =>
         {
-            Debug.WriteLine("***** ModifyMapping MauiFestMap 2");
+            Debug.WriteLine("***** AppendToMapping MauiFestMap 2");
         });
 
         Microsoft.Maui.Handlers.EntryHandler.Mapper.PrependToMapping("MauiFestMap", (handler, view) =>

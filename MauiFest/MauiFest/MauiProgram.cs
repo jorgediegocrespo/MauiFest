@@ -51,11 +51,11 @@ public static class MauiProgram
                 .AddTransient<MainViewModel>();
 
         //TODO 4.3 Handlers - mappers
-        //CreateMappers();
+        CreateMappers();
         return builder.Build();
 	}
 
-    private static void CreateMappers()
+    public static void CreateMappers()
     {
         ButtonMappers.CreateMappers();
     }
