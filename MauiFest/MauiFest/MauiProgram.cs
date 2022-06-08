@@ -39,11 +39,11 @@ public static class MauiProgram
             //})
             .Services
                 //TODO 2.5 Platform services
-                //#if ANDROID
-                //.AddSingleton<ISettingsService, MauiFest.Platforms.Android.Services.SettingsService>()
-                //#elif IOS    
-                //.AddSingleton<ISettingsService, MauiFest.Platforms.iOS.Services.SettingsService>()
-                //#endif
+#if ANDROID
+                .AddSingleton<ISettingsService, MauiFest.Platforms.Android.Services.SettingsService>()
+#elif IOS
+                .AddSingleton<ISettingsService, MauiFest.Platforms.iOS.Services.SettingsService>()
+#endif
                 //TODO 3.3 Common services
                 //.AddSingleton<ISettingsService, SettingsService>()
                 .AddTransient<AppShell>()
@@ -55,8 +55,8 @@ public static class MauiProgram
         return builder.Build();
 	}
 
-    private static void CreateMappers()
-    {
-        ButtonMappers.CreateMappers();
-    }
+    //private static void CreateMappers()
+    //{
+    //    ButtonMappers.CreateMappers();
+    //}
 }

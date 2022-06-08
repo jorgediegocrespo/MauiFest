@@ -21,12 +21,12 @@ public class MainViewModel : BaseViewModel
     //}
 
     //TODO 2.4 Platform services
-    //private readonly ISettingsService settingsService;
-    //public MainViewModel(ISettingsService settingsService)
-    //{
-    //    this.settingsService = settingsService;
-    //    OpenAppSettingsCommand = new Command(settingsService.OpenAppSettings);
-    //}
+    private readonly ISettingsService settingsService;
+    public MainViewModel(ISettingsService settingsService)
+    {
+        this.settingsService = settingsService;
+        OpenAppSettingsCommand = new Command(settingsService.OpenAppSettings);
+    }
 
     public ICommand OpenAppSettingsCommand { get; private set; }
 

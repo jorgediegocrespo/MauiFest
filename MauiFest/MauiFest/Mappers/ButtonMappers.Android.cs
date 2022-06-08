@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace MauiFest.Mappers;
 
-public class ButtonMappers
+public static class ButtonMappers
 {
     //TODO 4.1 Handlers - mappers
     public static void CreateMappers()
